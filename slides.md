@@ -22,12 +22,11 @@ controls: false
 - 1950s: Sharing of computer programs between academics
 - 1970s - 1990s: Internet protocols (TCP/IP, HTTP) and implementations (sendmail, postfix, bind, httpd, and OpenSSL)
 - 1980s - 1990s: Open programming languages
-- 1980s: GNU Project - A free alternative to Unix
+- 1980s: GNU Project (a free alternative to Unix), the beginning of open source as a social movement
 - 1992: Linux - An open operating system
 - 1998: Netscape open sourced
-- 2005: Git and
+- 2005: Git and GitHub (2008), GitLab (2011)
 - 2008 - 2011: GitHub and GitLab
-- 2010 - : Open source as a social movement
 
 ---
 
