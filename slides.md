@@ -25,8 +25,9 @@ controls: false
 - 1980s: GNU Project - A free alternative to Unix
 - 1992: Linux - An open operating system
 - 1998: Netscape open sourced
-- 2005: Git and GitHub (2008), GitLab (2011)
-- 2010s: Open source as a social movement
+- 2005: Git and
+- 2008 - 2011: GitHub and GitLab
+- 2010 - : Open source as a social movement
 
 ---
 
