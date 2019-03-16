@@ -597,55 +597,149 @@ pre {
 </section>
   </div>
   <div class="slide hidden -" id="slide-2">
-    <section class="slide-content"><h2 id="what-is-open-source-">What is open source?</h2>
-<blockquote>
-<p>Open source describes software where the source code is available for anyone to view, use, change, and then share. Making source code publicly available allows others to build on and learn from it, enabling broad collaboration from people around the world.</p>
-<p>Open source is a development methodology; free software is a social movement.</p>
-</blockquote>
-</section>
-  </div>
-  <div class="slide hidden -" id="slide-3">
-    <section class="slide-content"><h2 id="history">History</h2>
+    <section class="slide-content"><h2 id="topics">Topics</h2>
 <ul>
-<li>1950s: Sharing of computer programs between academics</li>
-<li>1970s - 1990s: Internet protocols (TCP/IP, HTTP) and implementations (sendmail, postfix, bind, httpd, and OpenSSL)</li>
-<li>1980s - 1990s: Open programming languages</li>
-<li>1980s: GNU Project - A free alternative to Unix</li>
-<li>1992: Linux - An open operating system</li>
-<li>1998: Netscape open sourced</li>
-<li>2005: Git and GitHub (2008), GitLab (2011)</li>
-<li>2010s: Open source as a social movement</li>
+<li>Git &amp; Github</li>
+<li>Branches, Pull Request</li>
+<li>What is NodeJS</li>
+<li>NPM packages and package.json</li>
+<li>Creating a node project</li>
+<li>A NodeJS webserver</li>
+<li>Testing</li>
+<li>Continuous Integration (CI)</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden -" id="slide-4">
-    <section class="slide-content"><h2 id="licenses">Licenses</h2>
+  <div class="slide hidden" id="slide-3">
+    <section class="slide-content"><h2 id="git">Git</h2>
 <blockquote>
-<p>An open source license protects contributors and users. Businesses and savvy developers won’t touch a project without this protection.</p>
+<p>A distributed version control system</p>
 </blockquote>
-<p><strong><a href="https://choosealicense.com/">choosealicense.com</a></strong></p>
+<p><img src="img/git-logo.png" alt="Git" style="height: 300px; margin: 0 auto; display: block;"></p>
 </section>
   </div>
-  <div class="slide hidden -" id="slide-5">
-    <section class="slide-content"><h2 id="distributed-version-control">Distributed Version control</h2>
-<blockquote>
-<p>Version control is any kind of practice that tracks and provides control over changes to source code</p>
-</blockquote>
-<p><img src="img/distributed-vcs.png" alt="Distributed version control" style="height: 300px; margin: 0 auto; display: block;"></p>
-</section>
-  </div>
-  <div class="slide hidden -" id="slide-6">
-    <section class="slide-content"><p><img src="img/git-logo.png" alt="Git" style="height: 300px; margin: 0 auto; display: block;"></p>
-</section>
-  </div>
-  <div class="slide hidden -" id="slide-7">
-    <section class="slide-content"><p><a href="https://git-scm.com/"><img src="img/branches_git.png" alt="Git branches" style="height: 500px; margin: 0 auto; display: block;"></a></p>
-</section>
-  </div>
-  <div class="slide hidden -" id="slide-8">
+  <div class="slide hidden" id="slide-4">
     <section class="slide-content"><h2 id="github">GitHub</h2>
 <p>A platform for collaborating on source code.</p>
 <p><a href="https://octodex.github.com/"><img alt="Codercat" src="img/codercat.jpg" style="height: 400px;"></a> <a href="https://octodex.github.com/"><img alt="Mountietocat" src="img/mountietocat.png" style="height: 400px;"></a></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-5">
+    <section class="slide-content"><h2 id="branches-pull-request">Branches, Pull Request</h2>
+<p><a href="https://git-scm.com/"><img src="img/branches_git.png" alt="Git branches" style="height: 500px; margin: 0 auto; display: block;"></a></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-6">
+    <section class="slide-content"><h2 id="what-is-nodejs">What is NodeJS</h2>
+<blockquote>
+<p>A JavaScript runtime to build scalable network applications</p>
+</blockquote>
+<p><a href="https://nodejs.org/"><img src="img/node-js-logo.png" alt="NodeJS logo" style="height: 350px; margin: 0 auto; display: block;"></a></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-7">
+    <section class="slide-content"><h2 id="the-__n__ode-__p__ackage-__m__anager-https-npmjs-org-">The <a href="https://npmjs.org"><strong>N</strong>ode <strong>P</strong>ackage <strong>M</strong>anager</a></h2>
+<ul>
+<li>currently hosts ~ 1m modules</li>
+<li>easy to use (<code>npm install &lt;package&gt;</code>)</li>
+<li>easy to publish (<code>npm publish</code>)</li>
+<li>use it with anything (folders, tarballs, git repositories)</li>
+</ul>
+<h3 id="-commonjs-http-www-commonjs-org-"><a href="http://www.commonjs.org/">CommonJS</a></h3>
+<ul>
+<li>Attempt for JavaScript API standardization</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden -" id="slide-8">
+    <section class="slide-content"><h2 id="commonjs-modules">CommonJS modules</h2>
+<p>Provides global <code>module</code>, <code>exports</code> and <code>require()</code> to define this files API</p>
+<pre><code class="lang-js"><span class="hljs-comment">// module1.js</span>
+exports.hello = <span class="hljs-string">'World'</span>;
+<span class="hljs-comment">// or</span>
+<span class="hljs-built_in">module</span>.exports = {
+  hello: <span class="hljs-string">'World'</span>
+}</code></pre>
+<p>Using the module</p>
+<pre><code class="lang-js"><span class="hljs-comment">// main.js</span>
+<span class="hljs-keyword">var</span> mod1 = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./module1'</span>);
+
+<span class="hljs-built_in">console</span>.log(mod1.hello); <span class="hljs-comment">// -&gt; World</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-9">
+    <section class="slide-content"><h2 id="package-json">package.json</h2>
+<p>CommonJS specification for describing JavaScript packages</p>
+<pre><code class="lang-js">{
+  <span class="hljs-string">"name"</span>: <span class="hljs-string">"nodeschool"</span>,
+  <span class="hljs-string">"version"</span>: <span class="hljs-string">"0.1.0"</span>,
+  <span class="hljs-string">"author"</span>: <span class="hljs-string">"Nodeschool &lt;people@nodeschool.com&gt;"</span>,
+  <span class="hljs-string">"description"</span>: <span class="hljs-string">"NodeJS FTW!"</span>,
+  <span class="hljs-string">"scripts"</span>: {
+    <span class="hljs-string">"test"</span>: <span class="hljs-string">"mocha test"</span>,
+    <span class="hljs-string">"start"</span>: <span class="hljs-string">"node lib/start.js"</span>
+  },
+  <span class="hljs-string">"main"</span>: <span class="hljs-string">"./lib/main.js"</span>,
+  <span class="hljs-string">"repository"</span>: {
+    <span class="hljs-string">"type"</span>: <span class="hljs-string">"git"</span>, <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://github.com/yycjs/node-up"</span>
+  },
+  <span class="hljs-string">"dependencies"</span>: { <span class="hljs-string">"somePackage"</span>: <span class="hljs-string">"^1.0.0"</span> },
+  <span class="hljs-string">"devDependencies"</span>: { <span class="hljs-string">"some-dev-only-package"</span>:  <span class="hljs-string">"^0.2.0"</span> },
+  <span class="hljs-string">"license"</span>: <span class="hljs-string">"MIT"</span>
+}</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-10">
+    <section class="slide-content"><h2 id="a-nodejs-webserver">A NodeJS webserver</h2>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>);
+
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">'127.0.0.1'</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
+
+<span class="hljs-keyword">const</span> server = http.createServer((req, res) =&gt; {
+  res.statusCode = <span class="hljs-number">200</span>;
+  res.setHeader(<span class="hljs-string">'Content-Type'</span>, <span class="hljs-string">'text/plain'</span>);
+  res.end(<span class="hljs-string">'Hello World\n'</span>);
+});
+
+server.listen(port, hostname, () =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Server running at http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>/`</span>);
+});</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-11">
+    <section class="slide-content"><h2 id="testing">Testing</h2>
+<blockquote>
+<p>Split functionality into contained units. Ideally each function should perform one <strong>unit</strong> of work.</p>
+</blockquote>
+<ul>
+<li>Testing frameworks: <a href="https://mochajs.org/">Mocha</a>, <a href="https://jestjs.io/">Jest</a>, <a href="https://jasmine.github.io/">Jasmine</a>, <a href="https://github.com/avajs/ava">Ava</a></li>
+<li>Code quality tools<ul>
+<li><a href="https://eslint.org/">ESLint</a></li>
+<li><a href="https://github.com/istanbuljs">Istanbul</a> (code coverage)</li>
+<li><a href="https://codeclimate.com/">Codeclimate</a></li>
+</ul>
+</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-12">
+    <section class="slide-content"><h2 id="continuous-integration-ci-">Continuous Integration (CI)</h2>
+<ul>
+<li>Use source control management system (SCM) for builds</li>
+<li>Run reports, tests, deploy or other tools on each SCM change</li>
+<li>Popular open source CI servers:<ul>
+<li><a href="http://jenkins-ci.org/">Jenkins</a>: Probably most popular CI server, formerly Hudson</li>
+<li><a href="http://cruisecontrol.sourceforge.net/">CruiseControl</a>: CI framework initially by Thoughtworks</li>
+</ul>
+</li>
+<li>Hosted CI services<ul>
+<li><a href="http://travis-ci.org">TravisCI</a>: Distributed build platform for the open source community</li>
+<li><a href="https://www.codeship.io/">Codeship</a>: Build and deploy service</li>
+<li><a href="https://circleci.com/">Circle CI</a></li>
+</ul>
+</li>
+</ul>
 </section>
   </div>
 
